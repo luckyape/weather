@@ -77,7 +77,7 @@ Weather.getForecast = function (city, callback) {
 
 Weather._getJSON = function( url, callback ) {
   if (isModule) {
-    return http.get(URL.parse(url), function(response) {
+    return http.get(url, function(response) {
       return callback(response.body);
     } );
   } else {
